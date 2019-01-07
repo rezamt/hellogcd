@@ -9,4 +9,7 @@ function check_credentials {
 
 
 check_credentials
+
+echo ISO Path is: $ISO_PATH
+
 echo "All validation passed"

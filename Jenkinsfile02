@@ -1,0 +1,2 @@
+job = Jenkins.getInstance().getItemByFullName("hellogocd", Job.class)
+print job.getLastBuild().getNumber()

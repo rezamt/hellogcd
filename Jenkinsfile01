@@ -1,0 +1,30 @@
+
+import jenkins.model.Jenkins
+
+pipeline {
+    agent any
+    
+    
+    stages {
+        stage ('build') {
+            steps {
+                
+                script {
+                    
+
+                    def jobname = "hellogocd"
+                    //If we want to add more then one job
+                    def items = new LinkedHashSet();
+                    def job = Hudson.instance.getJob(jobname)
+                    
+                    print job.getLastBuild().getNumber()
+                }
+                
+            }
+            
+        }
+        
+        
+    }
+    
+}
